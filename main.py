@@ -576,16 +576,16 @@ def create_todo():
     notebook.select(add_todo_tab)
     
     todo_create_button.configure(font=FONT)
-    todo_title_label = Label(add_todo_tab, text="Title", font=FONT, padx=5, pady=0)
+    todo_title_label = Label(add_todo_tab, text="Title", font='comicsanms 16 bold',bg='orange', padx=5, pady=0)
     todo_title_label.grid(row=1, column=0)
-    todo_title_entry = Entry(add_todo_tab, font=FONT, width=40)
+    todo_title_entry = Entry(add_todo_tab,font='comicsanms 16 bold', width=40,bg='white')
     
     todo_title_entry.focus()
     todo_title_entry.grid(row=2, column=0)
     
-    todo_content_label = Label(add_todo_tab, text="Description: ", font=FONT)
+    todo_content_label = Label(add_todo_tab, text="Description: ", font='comicsanms 16 bold',bg='blue')
     todo_content_label.grid(row=3, column=0)
-    
+
     todo_content_entry = Text(add_todo_tab, font=FONT, width=40, height=6)
     todo_content_entry.bind("<Return>", add_bullet_point)
     
